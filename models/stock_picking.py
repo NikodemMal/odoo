@@ -38,6 +38,6 @@ class StockPicking(models.Model):
                         },
                     }
 
-                # gotowy wizard mail compose
+                # gotowy wizard mail composeaa
         print("koniec")
         return res
