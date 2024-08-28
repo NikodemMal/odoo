@@ -14,15 +14,6 @@ class StockPicking(models.Model):
                 # Konwertuj scheduled_date do datetime
                 scheduled_date_datetime = datetime.combine(picking.scheduled_date, datetime.min.time())
                 if scheduled_date_datetime < (today_datetime - timedelta(weeks=2)):
-                    # return {
-                    #     'name': 'Overdue Picking Confirmation',
-                    #     'type': 'ir.actions.act_window',
-                    #     'res_model': 'stock.picking.wizard',
-                    #     'view_mode': 'form',
-                    #     'view_id': self.env.ref('stock_picking_wizard.view_stock_picking_wizard').id,
-                    #     'target': 'new',
-                    #     'context': {'active_id': picking.id},
-                    # }
 
                     return {
                         'name': 'Send Email',
