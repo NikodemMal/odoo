@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_picking_due_days" model="ir.config_parameter">
+        <field name="key">stock_picking_due_days</field>
+        <field name="value">14</field>
+    </record>
+</odoo>
