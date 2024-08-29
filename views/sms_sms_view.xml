@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_sms_sms_form_inherit" model="ir.ui.view">
+        <field name="name">sms.sms.form.inherit</field>
+        <field name="model">sms.sms</field>
+        <field name="inherit_id" ref="sms.sms_tsms_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='body']" position="after">
+                <field name="scheduled_date" widget="datetime"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
