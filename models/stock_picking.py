@@ -11,7 +11,7 @@ class StockPicking(models.Model):
         today_datetime = datetime.combine(today, datetime.min.time())
         for picking in self:
             if picking.scheduled_date:
-                # Konwertuj scheduled_date do datetime
+
                 scheduled_date_datetime = datetime.combine(picking.scheduled_date, datetime.min.time())
                 if scheduled_date_datetime < (today_datetime - timedelta(weeks=2)):
 
@@ -29,6 +29,4 @@ class StockPicking(models.Model):
                         },
                     }
 
-                # gotowy wizard mail compose
-        print("koniec")
         return res
