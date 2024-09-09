@@ -2,12 +2,12 @@
     'name': 'SMS Scheduler Delay',
     'version': '1.0',
     'category': 'Tools',
-    'summary': 'Opóźnienie wysyłki SMS w Odoo',
+    'summary': 'SMS sending delay in Odoo',
     'description': """
-        Aplikacja do opóźniania wysyłki SMS w Odoo. SMS będzie wysyłany w określonym czasie (scheduled_date).
+        Application for delaying SMS sending in Odoo. The SMS will be sent at a specified time (scheduled_date).
     """,
-
-    'depends': ['base','sms'],  # Zależność od aplikacji SMS
+    'author': 'Your Name',
+    'depends': ['base','sms'],
 
     'data': [
         'views/sms_sms_view.xml',
@@ -16,4 +16,5 @@
     'installable': True,
     'application': True,
     'auto_install': False,
+    'translation': ['i18n/pl_PL.csv'],
 }

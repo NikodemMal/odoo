@@ -1,0 +1,4 @@
+module,type,name,res_id,src,value,comments
+sms_delay,model,"ir.model,name",sms_delay.model_sms_sms,Outgoing SMS,wychodzacy SMS,
+sms_delay,model,"ir.model.fields,field_description",sms_delay.field_sms_sms__scheduled_date,Scheduled Send Date,Zaplanowany czas wyslania,
+sms_delay,model,"ir.model.fields,help",sms_delay.field_sms_sms__scheduled_date,The date and time when the SMS will be sent. The SMS will only be sent after this date is reached.,Data I czas kiedy SMS zostanie wyslany. SMS zostanie wyslany kiedy ta data zostanie osiagnieta,
