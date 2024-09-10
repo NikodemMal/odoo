@@ -5,10 +5,10 @@
     'summary': 'Displays a popup for stock pickings that are overdue by 2 weeks.',
     'depends': ['stock', 'mail'],
     'data': [
-        'views/stock_picking_views.xml',
         'data/ir_config_parameter.xml',
-        'views/email_template.xml',
+        'data/email_template.xml',
         'security/ir.model.access.csv',
+        'i18n/pl_PL.csv',
     ],
     'installable': True,
     'application': True,

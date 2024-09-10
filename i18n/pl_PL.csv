@@ -1,0 +1,16 @@
+module,type,name,res_id,src,value,comments
+stock_picking_wizard,model,"ir.model,name",stock_picking_wizard.model_stock_picking,Transfer,,
+stock_picking_wizard,model,"mail.template,name",stock_picking_wizard.email_template_stock_picking,Stock Picking Overdue Notification,Powiadomienie o spoznionym zadaniu,
+stock_picking_wizard,model,"mail.template,subject",stock_picking_wizard.email_template_stock_picking,Overdue Stock Picking,Zbyt pozne wybieranie zasobow,
+stock_picking_wizard,model,"mail.template,body_html",stock_picking_wizard.email_template_stock_picking,"
+                
+                    <p>Hello,</p>
+                    <p>This is a notification that stock picking <strong>${object.name}</strong> is overdue by more than 2 weeks.</p>
+                    <p>Best regards,<br/>Your Company</p>
+                
+            ","<p>Witaj,</p>
+<p>Informujemy, że wybieranie zapasów <strong>nazwa<strong> jest przeterminowane o ponad 2 tygodnie.</p>
+<p>Z poważaniem,<br/>Twoja Firma</p>
+",
+stock_picking_wizard,code,addons/stock_picking_wizard/models/stock_picking.py,19,Send Email,Wyslij Email,odoo-python
+stock_picking_wizard,code,addons/stock_picking_wizard/models/stock_picking.py,28,Overdue Stock Picking Notification,Powiadomienie o poterminowym odbiorze magazynowym,odoo-python

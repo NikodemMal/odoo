@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
-from odoo import models, fields, api
-
+from odoo import models, fields, api, _
 class StockPicking(models.Model):
+    _name = 'stock.picking'
     _inherit = 'stock.picking'
 
     def button_validate(self):
@@ -16,7 +16,7 @@ class StockPicking(models.Model):
                 if scheduled_date_datetime < (today_datetime - timedelta(weeks=2)):
 
                     return {
-                        'name': 'Send Email',
+                        'name': _('Send Email'),
                         'type': 'ir.actions.act_window',
                         'res_model': 'mail.compose.message',
                         'view_mode': 'form',
@@ -24,8 +24,8 @@ class StockPicking(models.Model):
                         'target': 'new',
                         'context': {
                             'default_model': 'stock.picking',
-                            'default_res_ids': [self.id],  # Zaktualizowany parametr (jako lista)
-                            'default_subject': 'Overdue Stock Picking Notification',
+                            'default_res_ids': [self.id],
+                            'default_subject': _('Overdue Stock Picking Notification'),
                         },
                     }
 
